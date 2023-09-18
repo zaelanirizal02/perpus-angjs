@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <h1>Data Buku</h1>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tr>
+                    <th>Judul</th>
+                    <th>Pengarang</th>
+                    <th>Tanggal Publikasi</th>
+                </tr>
+                <tr ng-repeat="a in books" ng-click="selectBook(a)">
+                    <td>{{ a.judul }}</td>
+                    <td>{{ a.pengarang }}</td>
+                    <td>{{ a.tanggal_publikasi | date:'dd/MM/yyyy' }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            <form ng-submit="save()">
+                <div class="form-group">
+                    <label for="">Judul</label>
+                    <input type="text" class="form-control" ng-model="form.judul">
+                </div>
+                <div class="form-group">
+                    <label for="">Pengarang</label>
+                    <input type="text" class="form-control" ng-model="form.pengarang">
+                </div>
+                <div class="form-group">
+                    <label for="">Tanggal Publikasi</label>
+                    <input type="date" class="form-control" ng-model="form.tanggal_publikasi">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                <button class="btn btn-danger" ng-click="delete()">Delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "perpus",
+  "version": "1.0.0",
+  "description": "Wb Application for pepus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rizal Zaelani",
+  "license": "ISC",
+  "dependencies": {
+    "angular-ui-router": "^1.0.30",
+    "bootstrap": "^5.3.1"
+  }
+}
